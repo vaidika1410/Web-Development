@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(40, 48, 48);
+            font-family: gilroy;
+        }
+
+        nav{
+            height: 14vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul{
+            height: 8vh;
+            width: 90%;
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 50px;
+        }
+
+        nav ul li{
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            position: relative;
+            transition: all ease 0.5s;
+        }
+
+        nav ul li a:hover{
+            color: rgb(48, 48, 48);
+        }
+        
+        nav ul .dropdown .dropdown-menu{
+            background-color: rgb(63, 63, 63);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 25px;
+            gap: 5px;
+            display: none;
+            position: absolute;
+            top: 9vh;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+        }
+
+        nav ul .dropdown:hover .dropdown-menu{
+            display: flex;
+        }
+
+        nav ul li button{
+            height: 6vh;
+            width: 9vw;
+            border-radius: 10px;
+            border: none;
+            font-family: gilroy;
+            text-transform: uppercase;
+            transition: all ease 0.3s;
+        }
+
+        nav ul li button:hover{
+            background-color: rgb(40, 48, 48);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home">home</a></li>
+            <li class="dropdown">
+                <a href="about">about</a>
+                <div class="dropdown-menu">
+                    <a href="our story">our story</a>
+                    <a href="team">team</a>
+                    <a href="contact">contact</a>
+                </div>
+            </li>
+            <li><a href="products">products</a></li>
+            <li><button>login</button></li>
+        </ul>
+    </nav>
+</body>
+</html>
