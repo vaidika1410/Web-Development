@@ -32,9 +32,15 @@ Car.prototype.needsService = function() {
     }
 }
 
+class ElectricCar extends Car{
+    
+}
+
 let Toyota = new Car("Toyota", "Corolla", (2022))
 console.log(Toyota)
 console.log(Toyota.displayDetails())
 console.log(Toyota.mileage)
 console.log(Toyota.updatedMileage(12500))
 console.log(Toyota.needsService())
+
+Object.setPrototypeOf()
