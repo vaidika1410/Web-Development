@@ -9,33 +9,47 @@ class Car {
     #engineStatus;
     #fuelLevel;
 
-    constructor(fuelLevel) {
+    constructor(fuelLevel){
         this.#fuelLevel = fuelLevel;
+        this.#engineStatus = false; //initialising engine status as false as the car is off
     }
 
     startCar() {
+        //the minimum fuel level required is 5 litres
         if(this.#fuelLevel >= 5) {
-            console.log("car starts");
-            state = true;
+            this.#engineStatus = true;
+            console.log(`Car started successfully!`);
         } else {
-            console.log("Not enough fuel, please refuel first!");
+            console.log("Not enough fuel! Please refuel at least 5 liters.");
         }
     }
 
     drive() {
-        return `the car has enough fuel and is on drive mode`;
-    }
-
-    refuel(fuel) {
-        if(fuel > 0) {
-            this.#fuelLevel += fuel;
+        if(this.#engineStatus) {
+            return `The car has enough fuel and is in drive mode. 🚙`;
+        } else {
+            return "Start the car first before driving! 🛑";
         }
     }
 
-    get status() {
+    refuel(fuelAmount) {
+        if(fuelAmount <= 0) {
+            console.log("Invalid fuel amount! Please add a positive value.");
+        } else {
+            this.#fuelLevel += fuelAmount;
+        }
+    }
+
+    get fuelLevel() {
         return this.#fuelLevel;
     }
 }
 
 let myCar = new Car(4);
-console.log(`${myCar.status}`);
+// console.log(myCar.drive()); //not enough fuel
+
+myCar.refuel(2);
+console.log(`${myCar.fuelLevel}`); //fuel level increased
+
+myCar.startCar();
+console.log(myCar.drive());
