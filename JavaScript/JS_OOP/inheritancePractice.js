@@ -8,27 +8,31 @@ class Vehicle {
     displayInfo() {
         console.log(`This is a ${this.year} ${this.make} ${this.model}.`)
     }
+
+    startEngine() {
+        console.log("The engine is starting...")
+    }
 }
 
 class Car extends Vehicle {
-    constructor(make, model, numDoors) {
-        super(make, model);
+    constructor(make, model, year, numDoors) {
+        super(make, model, year);
         this.numDoors = numDoors;
     }
 
     displayInfo() {
-        console.log(`This is a ${this.make} ${this.model}. It has ${this.numDoors} doors`);
+        console.log(`This is a ${this.year} ${this.make} ${this.model}. It has ${this.numDoors} doors`);
     }
 }
 
 class Bike extends Vehicle {
-    constructor(make, model, type) {
-        super(make, model);
+    constructor(make, model, year, type) {
+        super(make, model, year);
         this.type = type;
     }
 
     displayInfo() {
-        console.log(`This is a ${this.make} ${this.model}. It is a ${this.type} bike`);
+        console.log(`This is a ${this.year} ${this.make} ${this.model}. It is a ${this.type} bike`);
     }
 }
 
@@ -37,3 +41,6 @@ myCar.displayInfo();
 
 let myBike = new Bike("Kawasaki", "Ninja ZX-10R", 2004, "sports");
 myBike.displayInfo(); 
+
+myCar.startEngine();
+myBike.startEngine();
