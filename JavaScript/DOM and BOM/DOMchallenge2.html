@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Challenge 1</title>
+    <title>DOM Challenge 2</title>
     <style>
         *{
             margin: 0;
@@ -19,9 +19,15 @@
             font-family: gilroy;
         }
         
-        p{
+        h2{
             padding-top: 2vh;
             text-align: center;
+        }
+
+        ul{
+            text-align: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
         }
 
         button{
@@ -33,15 +39,23 @@
     </style>
 </head>
 <body>
-    <p id="paragraph">this is a paragraph, click on the button to change me</p>
-    <br>
-    <button id="changeText">change text</button>
+    <h2>Traversing the DOM</h2>
+    <ul id="cities">
+        <li>Tokyo</li>
+        <li>Paris</li>
+        <li>London</li>
+    </ul>
+
+    <button id="highlight">highlight first city</button>
 
     <script>
-        document.getElementById("changeText").addEventListener("click", function() {
-            console.log("clicked"); //do not use arrow functions here --> the context changes to global
-            let paragraph = document.getElementById("paragraph");
-            paragraph.textContent = "the paragraph is changed";
+        let button = document.getElementById("highlight");
+        let item = document.getElementById("cities").firstElementChild;
+
+        console.log(item)
+
+        button.addEventListener('click', function() {
+            item.style.backgroundColor = "blue"
         })
     </script>
 </body>
