@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Challenge 1</title>
+    <title>Document</title>
     <style>
         *{
             margin: 0;
@@ -19,6 +19,11 @@
             font-family: gilroy;
         }
         
+        h2{
+            padding-top: 2vh;
+            text-align: center;
+        }
+
         p{
             padding-top: 2vh;
             text-align: center;
@@ -33,16 +38,6 @@
     </style>
 </head>
 <body>
-    <p id="paragraph">this is a paragraph, click on the button to change me</p>
-    <br>
-    <button id="changeText">change text</button>
-
-    <script>
-        document.getElementById("changeText").addEventListener("click", function() {
-            console.log("clicked"); //do not use arrow functions here --> the context changes to global
-            let paragraph = document.getElementById("paragraph");
-            paragraph.textContent = "the paragraph is changed";
-        })
-    </script>
+        
 </body>
 </html>
