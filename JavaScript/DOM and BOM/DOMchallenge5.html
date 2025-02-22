@@ -47,21 +47,22 @@
 </head>
 
 <body>
-    <!-- creating and inserting elements -->
-    <h2>creating and inserting elements</h2>
-    <button id="addNewItem">Add a new item to the shopping list</button>
+    <!-- deleting elements -->
+    <h2>removing elements from the list</h2>
+    <button id="addNewItem">remove an item from the shopping list</button>
     <ul id="shoppingList">
         <li>Bread</li>
         <li>Milk</li>
+        <li>Butter</li>
+        <li>Sweet Corn</li>
+        <li>Egg</li>
     </ul>
 
     <script>
         let button = document.getElementById("addNewItem");
         button.addEventListener("click", function () {
-            let newItem = document.createElement('li'); //processed html -> node
-            newItem.textContent = 'Butter';
             let list = document.getElementById("shoppingList");
-            list.appendChild(newItem)
+            list.lastElementChild.remove();
         })
     </script>
 </body>
