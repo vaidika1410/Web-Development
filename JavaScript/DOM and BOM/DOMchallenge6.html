@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body{
+            height: 100vh;
+            width: 100%;
+            background-color: #111;
+            color: white;
+            font-family: gilroy;
+        }
+        
+        h2{
+            padding-top: 2vh;
+            text-align: center;
+        }
+
+        ul{
+            text-align: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+        }
+
+        button{
+            margin-left: 50%;
+            transform: translateX(-50%);
+            font-family: gilroy;
+            padding: 1vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event Delegation -->
+    <h2>Event Delegation</h2>
+    <ul id="teaList">
+        <li class="teaItem">Green tea</li>
+        <li class="teaItem">Black tea</li>
+        <li class="teaItem">Oolong tea</li>
+    </ul>
+    <p>click on any tea to select it!!</p>
+
+    <script>
+        let item = document.getElementById("teaList");
+
+        console.log(item)
+
+        item.addEventListener('click', function() {
+            
+        })
+    </script>
+</body>
+</html>
