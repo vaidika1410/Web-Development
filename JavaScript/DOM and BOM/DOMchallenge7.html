@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- form handling -->
+    <h2>Form handling</h2>
+    <form id="feedbackForm">
+        <label for="feedbackInput">your feedback : </label>
+        <input type="text" id="feedbackInput" placeholder="enter feedback" />
+        <button type="submit">submit feedback</button>
+    </form>
+
+    <p id="feedbackDisplay"></p>
+
+    <script>
+        document.
+        getElementById("feedbackForm")
+        .addEventListener("submit", function(event) {
+            event.preventDefault();
+            let feedback = document.getElementById("feedbackInput").value;
+            document.getElementById("feedbackDisplay").textContent = `feedback is : ${feedback}`
+        })
+    </script>
+</body>
+
+</html>

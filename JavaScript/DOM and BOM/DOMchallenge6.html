@@ -30,11 +30,8 @@
             padding-bottom: 2vh;
         }
 
-        button{
-            margin-left: 50%;
-            transform: translateX(-50%);
-            font-family: gilroy;
-            padding: 1vh;
+        p{
+            text-align: center; 
         }
     </style>
 </head>
@@ -53,8 +50,10 @@
 
         console.log(item)
 
-        item.addEventListener('click', function() {
-            
+        item.addEventListener('click', function(event) {
+            if(event.target && event.target.matches(".teaItem")){ // adding some edge cases in order to be precise
+                alert("you selected " + event.target.textContent);
+            }
         })
     </script>
 </body>

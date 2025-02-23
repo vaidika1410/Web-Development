@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: #111;
+            color: white;
+            font-family: gilroy;
+        }
+
+        h2 {
+            padding-top: 2vh;
+            text-align: center;
+        }
+
+        p {
+            padding-top: 2vh;
+            text-align: center;
+        }
+
+        button {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            font-family: gilroy;
+            padding: 1vh;
+            margin-top: 2vh;
+        }
+
+        .highlight{
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS classes manipulation -->
+    <h2>CSS Classes Manipulation</h2>
+    <p id="descriptionText">This text will change color!</p>
+    <button id="toggleHighlight">Toggle Highlight</button>
+
+    <script>
+        let button = document.getElementById("toggleHighlight");
+        button.addEventListener("click", function() {
+            let text = document.getElementById("descriptionText");
+            text.classList.toggle("highlight")
+        })
+    </script>
+</body>
+
+</html>
