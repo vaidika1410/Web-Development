@@ -1,4 +1,77 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: gilroy;
+
+}
+
+.container{
+    height: max-content;
+    width: 30%;
+    background-color: #555;
+    padding: 3vh;
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.input-container input{
+    padding: 2vh;
+    width: 70%;
+    background-color: #d4d4d4;
+    border: none;
+    border-radius: 5px;
+    font-family: gilroy;
+    text-transform: capitalize;
+    font-size: 2.3vh;
+}
+
+.input-container button{
+    padding: 2vh;
+    width: 29%;
+    background-color: rgb(106, 58, 178);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: gilroy;
+    text-transform: capitalize;
+    font-size: 2.3vh;
+}
+
+#todo-list{
+    margin-top: 2vh;
+}
+
+#todo-list li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #454545;
+    border-radius: 5px;
+    padding: 1vh;
+}
+
+#todo-list li button{
+    padding: 1vh;
+    background-color: rgb(164, 55, 55);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: gilroy;
+    text-transform: capitalize;
 }
