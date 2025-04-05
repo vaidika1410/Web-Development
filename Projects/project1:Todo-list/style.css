@@ -64,6 +64,7 @@ html, body{
     background-color: #454545;
     border-radius: 5px;
     padding: 1vh;
+    margin-bottom: 1vh;
 }
 
 #todo-list li button{
