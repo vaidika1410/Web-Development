@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    color: white;
+}
+
+ul{
+    height: 30vh;
+    width: 50%;
+}
+
+ul li{
+    color: #fff;
+
+}
+
+ul li span{
+    height: 100%;
+}
