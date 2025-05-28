@@ -7,20 +7,70 @@
 html, body{
     height: 100vh;
     width: 100%;
-    background-color: #111;
+    background-color: #222;
+    font-family: gilroy;
     color: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.container{
+    min-height: 58vh;
+    width: 30%;
+    background-color: #999;
+    border-radius: 10px;
+    padding: 3vh;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.container input{
+    height: 6vh;
+    padding: 1vh;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    font-family: gilroy;
+}
+
+#add-task-btn{
+    padding: 2vh 1vh;
+    border-radius: 5px;
+    border: none;
+    font-family: gilroy;
+    background-color: rgb(44, 149, 198);
+    color: #fff;
+}
+
+.completed{
+    text-decoration: line-through;
 }
 
 ul{
-    height: 30vh;
-    width: 50%;
+    margin-top: 3vh;
+    padding: 2vh 0;
 }
 
 ul li{
-    color: #fff;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* list-style: none; */
+    margin-bottom: 1vh;
+    background-color: #888;
+    padding: 1vh;
+    border-radius: 5px;
 }
 
-ul li span{
-    height: 100%;
+li button{
+    border-radius: 5px;
+    padding: 1vh;
+    border: none;
+    background-color: rgb(199, 77, 77);
+    color: #fff;
+    font-family: gilroy;
 }
