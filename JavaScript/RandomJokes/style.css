@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    width: 100%;
+    background-color: #222;
+    font-family: Gilroy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.container{
+    text-align: center;
+    line-height: 8vh;
+    width: 60%;
+}
+
+#get-joke{
+    padding: 1.5vh;
+    font-family: Gilroy;
+}
+
+#joke{
+    width: 100%;
+    text-align: center;
+}
+
+#error-message{
+    color: rgb(193, 99, 99);
+}
+
+.hidden{
+    display: none;
+}
