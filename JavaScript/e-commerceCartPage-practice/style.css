@@ -119,6 +119,7 @@ nav ul li a{
 .cart-container h1{
     padding: 1vh;
     border-bottom: 1px solid #ffb5a7;
+    position: relative;
 }
 
 #cart{
@@ -143,4 +144,24 @@ nav ul li a{
     height: 100%;
     width: 5vw;
     object-fit: cover;
+}
+
+#total-price-display{
+    position: absolute;
+    bottom: 4vh;
+    right: 2vh;
+    text-align: right;
+}
+
+#checkout-btn{
+    position: absolute;
+    bottom: 4vh;
+    left: 2vh;
+    text-align: right;
+    padding: 2vh 2vw;
+    font-family: Gilroy;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffb5a7;
+    cursor: pointer;
 }

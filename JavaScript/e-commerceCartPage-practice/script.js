@@ -57,10 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCart() {
         cartItemsDisplay.innerHTML = ""
         let totalPrice = 0
+        totalPriceDisplay.innerHTML = ""
 
         if (cart.length > 0) {
-            emptyCartMessage.classList.add('hidden')
-            totalPriceDisplay.classList.remove('hidden')
 
             cart.forEach(item => {
                 totalPrice += item.price
@@ -74,12 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 `
 
                 cartItemsDisplay.appendChild(cartItem)
-                totalPriceDisplay.innerHTML = `Price: Rs.${totalPrice.toFixed(2)}`
             })
+            totalPriceDisplay.innerHTML = `Total Price: <br>Rs. ${totalPrice.toFixed(2)}`
         } else {
             emptyCartMessage.classList.remove('hidden')
-            totalPriceDisplay.classList.add('hidden')
         }
     }
+
+    checkoutBtn.addEventListener('click', () => {
+        cart.length = 0;
+
+        renderCart()
+        alert('Checkout Successful')
+        totalPriceDisplay.innerHTML = ''
+        cartItemsDisplay.innerHTML = 'Your Shopping Cart is empty.'
+    })
 
 })
