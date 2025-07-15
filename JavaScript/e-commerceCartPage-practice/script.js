@@ -12,12 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 8, name: "Acrylic Paints", price: 150.00, image: "https://images.unsplash.com/photo-1719361888629-0d73d1c1bf8f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     ]
 
+    function updateCartStorage(){
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }
+
     const productDisplay = document.getElementById('products')
     const cartItemsDisplay = document.getElementById('cart')
     const emptyCartMessage = document.getElementById('empty-cart-message')
     const totalPriceDisplay = document.getElementById('total-price-display')
     const checkoutBtn = document.getElementById('checkout-btn')
-    const cart = []
+    const cart = JSON.parse(localStorage.getItem('cart')) || []
 
     function renderProducts() {
         products.forEach(product => {
@@ -48,13 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     renderProducts();
 
+    const CART = JSON.parse(localStorage.getItem('cart'))
+
     function addToCart(product) {
         cart.push(product)
-
-        renderCart()
+        updateCartStorage();
+        renderCart(cart)
     }
 
-    function renderCart() {
+    function renderCart(cart) {
         cartItemsDisplay.innerHTML = ""
         let totalPrice = 0
         totalPriceDisplay.innerHTML = ""
@@ -73,20 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 `
 
                 cartItemsDisplay.appendChild(cartItem)
+                checkoutBtn.classList.remove('hidden')
             })
             totalPriceDisplay.innerHTML = `Total Price: <br>Rs. ${totalPrice.toFixed(2)}`
         } else {
             emptyCartMessage.classList.remove('hidden')
+                checkoutBtn.classList.remove('hidden')
+
         }
     }
 
-    checkoutBtn.addEventListener('click', () => {
-        cart.length = 0;
 
-        renderCart()
+    checkoutBtn.addEventListener('click', ()=>{
+        cart.length = 0;
+        renderCart(cart)
+
         alert('Checkout Successful')
-        totalPriceDisplay.innerHTML = ''
-        cartItemsDisplay.innerHTML = 'Your Shopping Cart is empty.'
+        totalPriceDisplay.innerHTML = ""
+        cartItemsDisplay.innerHTML = "Your Shopping Cart is empty."
     })
 
 })
