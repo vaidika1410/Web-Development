@@ -7,8 +7,7 @@
 html, body{
     height: 100vh;
     width: 100%;
-    background-color: #111;
-    color: #fff;
+    background-color: #ffb5a7;
     font-family: Gilroy;
 
 }
@@ -16,7 +15,8 @@ html, body{
 nav{
     height: auto;
     width: max-content;
-    background-color: rgba(255, 255, 255, 0.202);
+    background-color: #fcd5ce;
+    color: #000;
     border-radius: 10px;
     padding: 2vh 5vw;
     margin: 2vh 2vw; 
@@ -38,20 +38,109 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
 }
 
 
 .main{
     height: 100vh;
     width: 100%;
-    background-color: rgb(0, 110, 255);
+    /* background-color: rgb(0, 110, 255); */
+    display: flex;
+    align-items: center;
+    
 }
 
 .products-container{
     height: 100%;
-    width: 70%;
-    border-right: 1px solid #ffffff74;
-    /* background-color: #ffffff88; */
-    
+    width: 80%;
+    margin-top: 10vh;
+    padding: 5vh;
+}
+
+#products{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+
+.cart-container{
+    height: 100%;
+    width: 20%;
+    background-color: #fcd5ce;
+    color: #000;
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cart-container::-webkit-scrollbar{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.product-item{
+    height: 43vh;
+    width: 23.9%;
+    background-color: #f8edeb;
+    color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-image{
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1vh;
+}
+
+.product-item-text{
+    margin: 1vh;
+}
+
+.add-to-cart-btn{
+    padding: 2vh;
+    margin: 1vh;
+    font-family: Gilroy;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9dcc4;
+    cursor: pointer;
+}
+
+.cart-container h1{
+    padding: 1vh;
+    border-bottom: 1px solid #ffb5a7;
+}
+
+#cart{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 2vh;
+
+}
+
+.cart-item{
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item-img{
+    height: 100%;
+    width: 5vw;
+    object-fit: cover;
 }

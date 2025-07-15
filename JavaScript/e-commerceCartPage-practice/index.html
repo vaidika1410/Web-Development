@@ -15,9 +15,21 @@
     </nav>
     <div class="main">
         <div class="products-container">
-`           
+            <h1>Products</h1>
+            <div id="products">
+                <!-- products will be rendered dynamically by js -->
+            </div>
         </div>
-        <div id="cart"></div>
+        <div class="cart-container">
+            <h1>Shopping Cart</h1>
+            <div id="cart">
+            <p id="empty-cart-message" class="">Your Cart is empty.</p>
+            <div id="total-price-display" class="hidden">
+                <span>total price : $0.00</span>
+            </div>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
