@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (cart.length > 0) {
 
+            console.log("CART DATA:", cart)
+
             cart.forEach(item => {
                 totalPrice += item.price
 
@@ -74,19 +76,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartItem.classList.add('cart-item')
 
                 cartItem.innerHTML = `
-                <span>${item.name} - Rs.${item.price.toFixed(2)}</span>
+                <span id="cart-item-details">${item.name} <br> Rs.${item.price.toFixed(2)}</span>
+                <div class="add-more-btn">+</div>
+                <div class="remove-item-btn">-</div>
                 <img src="${item.image}" alt="${item.name}" class="cart-item-img">
                 `
 
                 cartItemsDisplay.appendChild(cartItem)
                 checkoutBtn.classList.remove('hidden')
             })
+            const addItemBtn = document.querySelectorAll('.add-more-btn')
+            addItemBtn.forEach((btn,idx) => {
+                btn.addEventListener('click', ()=>{
+                    const btnId = cart[idx]
+                    const addedItem = parseInt(cart.find(i => i.id === btnId))
+                    cart.push(addedItem)
+                    renderCart(cart)
+                })
+            })
+
+
+            const removeItemBtn = document.querySelectorAll('.remove-item-btn')
+            console.log(removeItemBtn)
+
+
             totalPriceDisplay.innerHTML = `Total Price: <br>Rs. ${totalPrice.toFixed(2)}`
         } else {
             emptyCartMessage.classList.remove('hidden')
                 checkoutBtn.classList.remove('hidden')
 
         }
+
     }
 
 
@@ -97,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Checkout Successful')
         totalPriceDisplay.innerHTML = ""
         cartItemsDisplay.innerHTML = "Your Shopping Cart is empty."
+        checkoutBtn.classList.add('hidden')
     })
 
 })

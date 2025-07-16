@@ -119,14 +119,13 @@ html, body{
 #total-price-display{
     position: static;
     margin: 2vh;
-    margin-bottom: -7vh;
+    margin-bottom: -10vh;
     right: 2vh;
     text-align: right;
 }
 
 #checkout-btn{
     position: static;
-    bottom: 4vh;
     margin: 2vh;
     left: 2vh;
     text-align: right;
@@ -136,4 +135,34 @@ html, body{
     border-radius: 5px;
     background-color: #ffb5a7;
     cursor: pointer;
+    margin-top: 4vh;
+}
+
+#cart-item-details{
+    width: 40%;
+}
+
+.add-more-btn{
+    padding: 0vh 1vh;
+    background-color: #ffb5a7;
+    border-radius: 50px;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+.remove-item-btn{
+    padding: 0vh 1vh;
+    background-color: #ffb5a7;
+    border-radius: 50px;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+#cart-item-img{
+    padding: 0vh 1vh;
+    background-color: #ffb5a7;
+    color: red;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 3vh;
 }
