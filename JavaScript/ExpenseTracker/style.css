@@ -15,3 +15,64 @@ html, body{
     justify-content: center;
 }
 
+.container{
+    padding: 2vw;
+    background-color: #333;
+    border-radius: 10px;
+    width: 30%;
+}
+
+#expense-form{
+    margin: 1vh 0;
+}
+
+#expense-form input{
+    padding: 2vh 0.5vh;
+    font-family: Gilroy;
+    border: none;
+    border-radius: 5px;
+    margin: 1vh 0;
+    display: block;
+    width: 100%;
+}
+
+#expense-form #expense-name{
+    background-color: #111;
+}
+
+#expense-form #expense-amount{
+    background-color: #111;
+}
+
+#expense-form button{
+    padding: 1vh;
+    font-family: Gilroy;
+    border: none;
+    background-color: rgb(0, 106, 255);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.expense-div{
+    background-color: #222;
+    margin: 0.5vh 0;
+    padding: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expense-div-btn{
+    padding: 1vh 1vw;
+    background-color: rgb(219, 68, 68);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: Gilroy;
+}
+
+#total{
+    margin-top: 2vh;
+}
