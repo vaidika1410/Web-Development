@@ -33,8 +33,8 @@ This repo contains all the projects, mini-apps, and assignments I've built while
 ## 🛠️ How to Run Locally
 
 1. Clone the repository:
-   ```git clone https://github.com/vaidika1410/Web-Development.git
-   cd Web-Development```
+   ```git clone https://github.com/vaidika1410/Web-Development.git```
+   ```cd Web-Development```
 
 2. Open any .html file directly in your browser:
 
